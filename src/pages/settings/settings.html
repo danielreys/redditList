@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Configuración
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (submit)="setDefaults()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Categoria</ion-label>  
+        <ion-select [(ngModel)]="category" name="category">
+          <ion-option value="sports">Deportes</ion-option>
+          <ion-option value="food">Comida</ion-option>
+          <ion-option value="news">Noticias</ion-option>
+          <ion-option value="music">Música</ion-option>
+          <ion-option value="funny">Gracioso</ion-option>
+          <ion-option value="gaming">Gaming</ion-option>
+          <ion-option value="art">Artístico</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Paginación</ion-label>  
+        <ion-select [(ngModel)]="limit" name="limit">
+          <ion-option value="5">5</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="20">20</ion-option>
+          <ion-option value="25">25</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button type="submit" block>Guardar</button>
+    </ion-list>  
+  </form>
+</ion-content>
